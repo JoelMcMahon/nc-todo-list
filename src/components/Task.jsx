@@ -1,21 +1,22 @@
-const Task = ({ task, setTodos }) => {
+const Task = ({ task, setTaskList }) => {
   const checkTask = (e) => {
-    setTodos((currTodo) => {
-      const copyTodo = currTodo.map((task) => {
-        const copyTask = { ...task };
-        if (task.todo === copyTask.todo) {
+    setTaskList((currTaskList) => {
+      const copyTaskList = currTaskList.map((activity) => {
+        const copyTask = { ...activity };
+        if (task.name === copyTask.name) {
           copyTask.completed = e.target.checked;
         }
+        console.log(copyTask.completed);
         return copyTask;
       });
-      return copyTodo;
+      return copyTaskList;
     });
   };
 
   return (
-    <ul>
-      <li>{task.todo}</li>
-      <input class="checkbox" type="checkbox" onChange={checkTask} />
+    <ul className="container">
+      <li className={task.completed ? 'striked' : 'none'}>{task.name}</li>
+      <input className="checkbox" type="checkbox" onChange={checkTask} />
     </ul>
   );
 };

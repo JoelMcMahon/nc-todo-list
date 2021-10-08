@@ -4,5 +4,13 @@
 
 li {
   list-style-type: none;
+  display:inline;
 }
 
+.striked {
+  text-decoration: line-through;
+}
+
+.checkbox {
+  display:inline;
+}

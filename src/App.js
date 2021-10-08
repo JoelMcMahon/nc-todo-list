@@ -1,13 +1,13 @@
 import './App.css';
 import Header from './components/Header';
-import TodoAdder from './components/TodoAdder';
-import TodoList from './components/TodoList';
+import TaskAdder from './components/TaskAdder';
+import DisplayList from './components/DisplayList';
 import { useState } from 'react';
 
 function App() {
-  const [Todo, setTodos] = useState([
+  const [taskList, setTaskList] = useState([
     {
-      todo: 'Breakfast',
+      name: 'Breakfast',
       completed: false,
     },
   ]);
@@ -15,8 +15,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <TodoAdder setTodos={setTodos} />
-      <TodoList Todo={Todo} setTodos={setTodos} />
+      <TaskAdder setTaskList={setTaskList} />
+      <DisplayList taskList={taskList} setTaskList={setTaskList} />
     </div>
   );
 }
