@@ -1,12 +1,15 @@
 import { useState } from 'react';
 
+let idCount = 0;
 const TaskAdder = ({ setTaskList }) => {
   const [newTask, setNewTask] = useState('');
+
 
   const addTask = (e) => {
     e.preventDefault();
     setTaskList((currTasks) => {
-      const taskToAdd = { name: newTask, completed: false };
+      idCount++
+      const taskToAdd = {id: idCount, name: newTask, completed: false };
       const newTaskList = [taskToAdd, ...currTasks];
       return newTaskList;
     });

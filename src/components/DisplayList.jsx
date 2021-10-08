@@ -4,7 +4,7 @@ const DisplayList = ({ taskList, setTaskList }) => {
   return (
     <section>
       {taskList.map((task) => {
-        return <Task task={task} key={task.name} setTaskList={setTaskList} />;
+        return <Task task={task} key={task.id} setTaskList={setTaskList} />;
       })}
     </section>
   );
