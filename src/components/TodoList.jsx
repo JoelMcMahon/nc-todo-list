@@ -1,11 +1,13 @@
-const TodoList = ({Todo}) => {
-    return (
-        <ul>
-            {Todo.map((todo) => {
-                return <li key='todo.todo'>{todo.todo}</li>
-            })}
-        </ul>
-    )
-}
+import Task from './Task';
 
-export default TodoList; 
+const TodoList = ({ Todo, setTodos }) => {
+  return (
+    <section>
+      {Todo.map((task) => {
+        return <Task task={task} key={task.todo} setTodos={setTodos} />;
+      })}
+    </section>
+  );
+};
+
+export default TodoList;
