@@ -16,11 +16,13 @@ function App() {
 
   return (
     <div className="App">
+      <section class='listCard'>
       <Header />
       <CustomMessage taskList={taskList}/>
       <TaskAdder setTaskList={setTaskList} />
       <TaskListDeleter setTaskList={setTaskList}/>
       <DisplayList taskList={taskList} setTaskList={setTaskList} />
+      </section>
     </div>
   );
 }

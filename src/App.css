@@ -1,5 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;700;900&display=swap');
+
 .App {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  /* background: url(/Users/joelmcmahon/Northcoders/frontend/nc-todo-list/src/images/webb.png); */
+  /* font-family: 'Source Sans Pro', sans-serif; */
+  /* height: 100vh; */
+}
+
+body {
+  background: url(/Users/joelmcmahon/Northcoders/frontend/nc-todo-list/src/images/webb.png);
+
+}
+
+.listCard {
+  background-color: rgb(255, 255, 255);
+  height: auto;
+  /* max-height: 400px; */
+  min-height: 20em;
+  border: 1px solid black;
+  border-radius: 1em;
+  padding: 0.1em 1em 1em 1em;
+  margin-top: 3em;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 0px;
+  padding: 1em 1em 0em 1em;
+}
+
+p {
+  padding: 1em;
+  font-size: 1.2em;
+  margin-bottom: 0px;
+}
+
+
+.fullStop {
+  color: rgb(89, 222, 129);
 }
 
 li {

@@ -1,7 +1,7 @@
 const Header = () => {
     return (
         <header>
-            <h1>Todo List.</h1>
+            <h1>Todo List<span class="fullStop">.</span></h1>
         </header>
     )
 }
